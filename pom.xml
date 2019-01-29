@@ -11,6 +11,7 @@
     <modules>
         <module>synchronized-test</module>
         <module>springboot-connect-test</module>
+        <module>classloader-test</module>
     </modules>
 
     <properties>
