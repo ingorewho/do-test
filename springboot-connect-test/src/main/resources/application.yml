@@ -1,0 +1,6 @@
+server:
+  session:
+    timeout: 1
+  tomcat:
+    basedir: .
+    max-threads: 300
