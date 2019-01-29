@@ -11,7 +11,8 @@ public class DefinedClassLoader extends ClassLoader{
     /**class根路径.**/
     private String path;
 
-    public DefinedClassLoader(String path){
+    public DefinedClassLoader(ClassLoader parent,String path){
+        super(parent);
         this.path = path;
     }
 

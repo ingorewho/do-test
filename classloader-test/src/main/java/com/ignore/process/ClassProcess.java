@@ -20,4 +20,9 @@ public class ClassProcess {
     public ClassProcess(){
         System.out.println("执行构造器.");
     }
+
+    public void test(){
+        //修改打印信息，方便看到热部署的效果
+        System.out.println("测试方法1.");
+    }
 }
