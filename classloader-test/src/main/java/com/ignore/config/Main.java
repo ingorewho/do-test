@@ -4,7 +4,7 @@ import java.lang.reflect.Method;
 
 /**
  * @Author: ignore1992
- * @Description:
+ * @Description: 类加载器常见的用途有类的隔离和热替换
  * @Date: Created In 11:23 2019/1/29
  */
 public class Main {
