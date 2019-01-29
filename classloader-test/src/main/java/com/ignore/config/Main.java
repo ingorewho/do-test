@@ -18,7 +18,7 @@ public class Main {
             System.out.println(clazz1.getClassLoader());
             int i = 0;
             while (i <= 10){
-                //每次重新new ClassLoader，简单实现热部署功能
+                //每次重新new ClassLoader，这里不设置父类加载器，避免使用双亲委派，从而简单实现热部署功能
                 classLoader = new DefinedClassLoader(null, path);
                 //直接调用自定义类加载器的findClass来加载类
                 Class clazz2 = classLoader.findClass("com.ignore.process.ClassProcess");
