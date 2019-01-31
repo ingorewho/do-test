@@ -12,6 +12,7 @@
         <module>synchronized-test</module>
         <module>springboot-connect-test</module>
         <module>classloader-test</module>
+        <module>okhttp-test</module>
     </modules>
 
     <properties>
@@ -30,6 +31,11 @@
     </parent>
 
     <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.20</version>
+        </dependency>
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
