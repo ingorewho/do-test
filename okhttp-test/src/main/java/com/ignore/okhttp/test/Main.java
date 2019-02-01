@@ -15,8 +15,10 @@ import java.io.IOException;
  */
 public class Main {
     public static void main(String[] args) {
-        //1.执行get同步请求
+        //1.重复执行get同步请求，为了方便查看缓存命中信息
         System.out.println(ProcessOkhttp.get("https://api.apiopen.top/searchAuthors?name=%E6%9D%8E%E7%99%BD", null));
+        System.out.println(ProcessOkhttp.get("https://api.apiopen.top/searchAuthors?name=%E6%9D%8E%E7%99%BD", null));
+
         //2.执行get异步请求
         ProcessOkhttp.getAsync("https://api.apiopen.top/searchAuthors?name=%E6%9D%8E%E7%99%BD", null);
         //3.执行post同步请求：提交form表单

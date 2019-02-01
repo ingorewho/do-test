@@ -1,10 +1,12 @@
 package com.ignore.okhttp.config;
 
+import okhttp3.Cache;
 import okhttp3.OkHttpClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import javax.net.ssl.*;
+import java.io.File;
 import java.security.KeyManagementException;
 import java.security.NoSuchAlgorithmException;
 import java.security.cert.X509Certificate;
@@ -34,9 +36,11 @@ public class OkhttpConfig {
         builder.connectTimeout(5, TimeUnit.SECONDS)
                 .readTimeout(10, TimeUnit.SECONDS)
                 .writeTimeout(10, TimeUnit.SECONDS)
+                .addInterceptor(new TestInterceptor())
                 .addInterceptor(new OkInterceptor())
                 .addNetworkInterceptor(new OkNetInterceptor())
                 .retryOnConnectionFailure(true)
+                .cache(new Cache(new File("D:/"), 10240))
                 .sslSocketFactory(getTrustedSSLSocketFactory())
                 .hostnameVerifier(DO_NOT_VERIFY);
         return builder.build();
