@@ -1,8 +1,11 @@
 package com.ignore.test;
 
 import com.ignore.forkjoin.task.PrintTask;
+import com.ignore.forkjoin.task.SumTask;
 
+import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ForkJoinPool;
+import java.util.concurrent.ForkJoinTask;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -13,8 +16,17 @@ import java.util.concurrent.TimeUnit;
 public class Main {
     public static void main(String[] args){
         ForkJoinPool pool = new ForkJoinPool();
-        PrintTask task = new PrintTask(0, 1000);
-        pool.submit(task);
+        PrintTask printTask = new PrintTask(0, 1000);
+        pool.submit(printTask);
         pool.awaitQuiescence(2, TimeUnit.SECONDS);
+        SumTask sumTask = new SumTask(0, 1000);
+        ForkJoinTask<Integer> result = pool.submit(sumTask);
+        try {
+            System.out.println(result.get());
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
     }
 }
