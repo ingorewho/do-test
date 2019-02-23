@@ -13,6 +13,7 @@
         <module>springboot-connect-test</module>
         <module>classloader-test</module>
         <module>okhttp-test</module>
+        <module>forkjoinpool-test</module>
     </modules>
 
     <properties>
