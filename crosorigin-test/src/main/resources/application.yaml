@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: crosorigin-server
+  thymeleaf:
+    prefix: classpath:/templates/
+
+server:
+  port: 8099
