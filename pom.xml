@@ -18,6 +18,9 @@
         <module>common-test</module>
         <module>crosorigin-test</module>
         <module>lamda-test</module>
+        <module>collection-test</module>
+        <module>object-test</module>
+        <module>jdkspec-test</module>
     </modules>
 
     <properties>
