@@ -21,6 +21,7 @@
         <module>collection-test</module>
         <module>object-test</module>
         <module>jdkspec-test</module>
+        <module>annotation-test</module>
     </modules>
 
     <properties>
