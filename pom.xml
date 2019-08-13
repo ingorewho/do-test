@@ -22,6 +22,7 @@
         <module>object-test</module>
         <module>jdkspec-test</module>
         <module>annotation-test</module>
+        <module>validator-test</module>
     </modules>
 
     <properties>
